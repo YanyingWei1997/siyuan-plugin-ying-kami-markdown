@@ -67,8 +67,8 @@ html.ying-kami-markdown-enabled {
   --kami-code-green: #7ee787;
   --kami-code-purple: #d2a8ff;
   --kami-code-orange: #ffa657;
-  --kami-ui: "Inter Variable", Inter, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
   --kami-body: "LXGW WenKai", "霞鹜文楷", "PingFang SC", "Songti SC", serif;
+  --kami-ui: var(--kami-body);
   --kami-mono: "Maple Mono NF CN", "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
 }
 
@@ -105,7 +105,7 @@ html.ying-kami-markdown-enabled .protyle-title {
 
 html.ying-kami-markdown-enabled .protyle-title__input {
   color: var(--kami-ink);
-  font-family: "Kami Title", "上图东观体", var(--kami-body) !important;
+  font-family: var(--kami-body) !important;
   font-size: 2.25rem;
   font-weight: 400;
   line-height: 1.28;
@@ -114,7 +114,7 @@ html.ying-kami-markdown-enabled .protyle-title__input {
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h1, .b3-typography h1) {
   color: var(--kami-ink);
-  font-family: "Kami Title", "上图东观体", var(--kami-body) !important;
+  font-family: var(--kami-body) !important;
   font-size: 2.25rem;
   font-weight: 400;
   line-height: 1.28;
@@ -125,7 +125,7 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h1, .b3-typography h1) {
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h2, .b3-typography h2) {
   color: var(--kami-blue);
-  font-family: "Kami Section", "汇迹正楷", var(--kami-body) !important;
+  font-family: var(--kami-body) !important;
   font-size: 1.56rem;
   font-weight: 400;
   line-height: 1.46;
@@ -136,7 +136,7 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h2, .b3-typography h2) {
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h3, .b3-typography h3) {
   color: var(--kami-blue-ink);
-  font-family: "演示魁本楷", var(--kami-body) !important;
+  font-family: var(--kami-body) !important;
   font-size: 1.22rem;
   font-weight: 400;
   line-height: 1.52;
@@ -146,7 +146,7 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h3, .b3-typography h3) {
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h4, .b3-typography h4) {
   color: #30474f;
-  font-family: "Kami Minor", "汇迹正楷", var(--kami-body) !important;
+  font-family: var(--kami-body) !important;
   font-size: 1.06rem;
   font-weight: 600;
   line-height: 1.48;
@@ -164,13 +164,13 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h5, .protyle-wysiwyg .h6, 
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h5, .b3-typography h5) {
   color: #505e63;
-  font-size: 0.92rem;
+  font-size: 1.06em;
   font-weight: 600;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h6, .b3-typography h6) {
   color: #68645f;
-  font-size: 0.86rem;
+  font-size: 1em;
   font-weight: 500;
 }
 

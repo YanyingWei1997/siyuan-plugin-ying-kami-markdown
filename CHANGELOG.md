@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.6
+
+- Use LXGW WenKai throughout the scoped Markdown theme, excluding monospace code content.
+- Keep level-six headings at the body text size and level-five headings slightly larger.
+
 ## 0.1.5
 
 - Replace only fenced-code syntax colors with the GitHub Dark palette while preserving the existing macOS frame, typography, spacing and background.
