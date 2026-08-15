@@ -185,6 +185,29 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg del, .protyle-wysiwyg span[
   text-decoration-color: #aaa79d;
 }
 
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg span[data-type~="tag"], .b3-typography span[data-type~="tag"]) {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.08em;
+  padding: 0.06em 0.44em 0.1em;
+  border: 1px solid rgba(6, 82, 121, 0.28);
+  border-radius: 999px;
+  background: rgba(227, 240, 244, 0.72);
+  color: var(--kami-blue) !important;
+  font-family: var(--kami-body);
+  font-size: 0.86em;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg span[data-type~="tag"], .b3-typography span[data-type~="tag"]):hover {
+  border-color: rgba(6, 82, 121, 0.48);
+  background: rgba(227, 240, 244, 0.96);
+}
+
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg a, .protyle-wysiwyg span[data-type~="a"], .b3-typography a) {
   color: #044766;
   font-weight: 500;

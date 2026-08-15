@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.9
+
+- Render inline tags as subtle blue capsules with a translucent background, fine outline and accessible hover state.
+- Keep the accepted heading hierarchy and Esther macOS code-panel palette unchanged.
+
 ## 0.1.8
 
 - Match the macOS code panel palette from Esther Design System: ink-blue body text, purple keywords, blue functions, green strings and orange numbers, with the gray-blue comment tone lifted to a readable contrast.

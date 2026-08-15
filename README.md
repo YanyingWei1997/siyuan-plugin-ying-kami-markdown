@@ -9,3 +9,5 @@ The writing surface uses a responsive column capped at 1180px, with safe gutters
 All headings use LXGW WenKai and the established level-two blue. Fourth-level headings retain a stronger weight, level-five headings are slightly larger than body text, and level-six headings remain equal to body text. The editor canvas and print output are fixed to pure white.
 
 Fenced code retains its macOS window treatment while using larger, heavier monospace text and the purple, blue, green and orange code-panel palette from Esther Design System.
+
+Inline tags use a translucent pale-blue capsule, deep-blue text and a fine outline with a restrained hover state.

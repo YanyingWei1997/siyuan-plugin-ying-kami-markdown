@@ -18,6 +18,8 @@ Kami 原文件的纸面变量是 `#fff8ed`。按当前要求，思源正文纸�
 
 代码框保留 macOS 窗口结构，正文使用更大的 Maple Mono / SF Mono 字号与较高字重；Python、JSON 等语法高亮采用 Esther Design System 代码面板的紫、蓝、绿、橙色板。
 
+行内 Tag 使用浅蓝半透明胶囊背景、深蓝文字和细边框；悬停时轻微加深，不使用突兀白底。
+
 ## 字体
 
 Markdown 正文与标题统一使用霞鹜文楷，代码使用 Maple Mono / SF Mono。字体文件不打包，缺失时按系统中文字体回退。
