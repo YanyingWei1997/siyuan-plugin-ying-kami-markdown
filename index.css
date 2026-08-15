@@ -42,6 +42,8 @@
 }
 
 html.ying-kami-markdown-enabled {
+  --kami-reading-width: 1180px;
+  --kami-reading-inset: clamp(40px, 6vw, 88px);
   --kami-paper: #ffffff;
   --kami-paper-raised: #fffaf2;
   --kami-paper-tint: #fff3dc;
@@ -72,14 +74,18 @@ html.ying-kami-markdown-enabled :is(.protyle-title, .protyle-wysiwyg, .b3-typogr
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg, .b3-typography) {
-  max-width: 720px;
+  box-sizing: border-box;
+  width: calc(100% - var(--kami-reading-inset)) !important;
+  max-width: var(--kami-reading-width) !important;
   margin-right: auto;
   margin-left: auto;
   background: var(--kami-paper);
 }
 
 html.ying-kami-markdown-enabled .protyle-title {
-  max-width: 720px;
+  box-sizing: border-box;
+  width: calc(100% - var(--kami-reading-inset)) !important;
+  max-width: var(--kami-reading-width) !important;
   margin-right: auto;
   margin-left: auto;
   padding-top: 3.5rem;
@@ -233,10 +239,13 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg span[data-type~="code"], .b
   background: #e9edf2;
   border: 0;
   border-radius: 3px;
+  box-shadow: none !important;
+  filter: none !important;
   font-family: var(--kami-mono);
   font-size: 0.8em;
   font-weight: 500;
   padding: 0.12em 0.32em;
+  text-shadow: none !important;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .math, .protyle-wysiwyg .render-node[data-subtype="math"], .b3-typography .language-math) {
@@ -487,6 +496,10 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .hr > div::after, .b3-typog
 }
 
 @media screen and (max-width: 820px) {
+  html.ying-kami-markdown-enabled {
+    --kami-reading-inset: 32px;
+  }
+
   html.ying-kami-markdown-enabled :is(.protyle-title, .protyle-wysiwyg, .b3-typography) {
     font-size: 16px;
   }

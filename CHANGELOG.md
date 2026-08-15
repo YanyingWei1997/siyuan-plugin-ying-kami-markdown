@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Expand the fixed 720px writing column to a responsive layout capped at 1180px.
+- Remove inherited box shadow, text shadow and filters from inline code.
+
 ## 0.1.1
 
 - Remove SiYuan's inherited secondary bar from blockquotes and keep a single fine guide rule.
