@@ -59,13 +59,14 @@ html.ying-kami-markdown-enabled {
   --kami-red: #e84a5f;
   --kami-dark-panel: #20252c;
   --kami-code-chrome: #2a3039;
-  --kami-code-text: #f0f3f6;
-  --kami-code-muted: #aab4c0;
-  --kami-code-blue: #8dccff;
-  --kami-code-cyan: #9fd4ff;
-  --kami-code-green: #b6dcae;
-  --kami-code-purple: #dabaff;
-  --kami-code-gold: #f2d39b;
+  --kami-code-text: #e6edf3;
+  --kami-code-muted: #8b949e;
+  --kami-code-red: #ff7b72;
+  --kami-code-blue: #79c0ff;
+  --kami-code-string: #a5d6ff;
+  --kami-code-green: #7ee787;
+  --kami-code-purple: #d2a8ff;
+  --kami-code-orange: #ffa657;
   --kami-ui: "Inter Variable", Inter, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
   --kami-body: "LXGW WenKai", "霞鹜文楷", "PingFang SC", "Songti SC", serif;
   --kami-mono: "Maple Mono NF CN", "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
@@ -396,8 +397,12 @@ html.ying-kami-markdown-enabled :is(.hljs-comment, .hljs-quote) {
   color: var(--kami-code-muted) !important;
 }
 
-html.ying-kami-markdown-enabled :is(.hljs-keyword, .hljs-selector-tag, .hljs-template-tag, .hljs-name, .hljs-tag, .hljs-type) {
-  color: var(--kami-code-blue) !important;
+html.ying-kami-markdown-enabled :is(.hljs-keyword, .hljs-selector-tag, .hljs-template-tag, .hljs-type) {
+  color: var(--kami-code-red) !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-name, .hljs-tag) {
+  color: var(--kami-code-green) !important;
 }
 
 html.ying-kami-markdown-enabled :is(.hljs-operator, .hljs-punctuation, .hljs-subst, .hljs-params) {
@@ -405,27 +410,27 @@ html.ying-kami-markdown-enabled :is(.hljs-operator, .hljs-punctuation, .hljs-sub
 }
 
 html.ying-kami-markdown-enabled :is(.hljs-string, .hljs-regexp, .hljs-addition, .hljs-doctag) {
-  color: var(--kami-code-green) !important;
+  color: var(--kami-code-string) !important;
 }
 
 html.ying-kami-markdown-enabled :is(.hljs-number, .hljs-literal, .hljs-symbol, .hljs-bullet, .hljs-built_in) {
-  color: var(--kami-code-purple) !important;
+  color: var(--kami-code-blue) !important;
 }
 
 html.ying-kami-markdown-enabled :is(.hljs-title, .hljs-section, .hljs-function, .hljs-class) {
-  color: var(--kami-code-gold) !important;
+  color: var(--kami-code-purple) !important;
 }
 
 html.ying-kami-markdown-enabled :is(.hljs-attr, .hljs-attribute, .hljs-property, .hljs-variable, .hljs-template-variable) {
-  color: var(--kami-code-cyan) !important;
+  color: var(--kami-code-orange) !important;
 }
 
 html.ying-kami-markdown-enabled :is(.hljs-meta, .hljs-meta .hljs-keyword) {
-  color: #e5b978 !important;
+  color: var(--kami-code-blue) !important;
 }
 
 html.ying-kami-markdown-enabled .hljs-deletion {
-  color: #f2a7a7 !important;
+  color: #ffa198 !important;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg table, .b3-typography table) {

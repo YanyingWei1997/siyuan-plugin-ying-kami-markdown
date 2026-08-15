@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5
+
+- Replace only fenced-code syntax colors with the GitHub Dark palette while preserving the existing macOS frame, typography, spacing and background.
+
 ## 0.1.4
 
 - Increase fenced-code size, weight and line height for sustained reading.
