@@ -44,7 +44,7 @@ def validate() -> dict[str, object]:
     if icon != (160, 160) or preview != (1024, 768):
         raise ValueError(f"Invalid image dimensions: icon={icon}, preview={preview}")
     css = (ROOT / "index.css").read_text(encoding="utf-8")
-    for marker in ("ying-kami-markdown-enabled", "#ffffff", "NodeCodeBlock", "red-circle"):
+    for marker in ("ying-kami-markdown-enabled", "#ffffff", "NodeCodeBlock", "tbody tr:hover"):
         if marker not in css:
             raise ValueError(f"index.css missing marker: {marker}")
     return {"name": manifest["name"], "version": manifest["version"], "sourceSHA256": source_hash}

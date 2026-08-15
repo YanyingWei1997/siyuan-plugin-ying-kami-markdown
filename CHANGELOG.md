@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+- Remove SiYuan's inherited secondary bar from blockquotes and keep a single fine guide rule.
+- Render editor tables with real table layout so columns fill the available width.
+- Replace yellow table surfaces with white body cells and a neutral-gray header.
+- Remove the red-circle annotation mapping from the SiYuan adapter.
+
 ## 0.1.0
 
 - Preserve the local Typora Kami CSS as an unchanged source asset.

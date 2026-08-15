@@ -193,26 +193,39 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg input[type="checkbox"], .b3
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .bq, .protyle-wysiwyg blockquote, .b3-typography blockquote) {
   position: relative;
-  margin: 1.85rem 0;
-  padding: 0.2rem 0 0.2rem 1.35rem;
+  margin: 1.65rem 0;
+  padding: 0.3rem 0 0.3rem 1.25rem;
   border: 0;
-  border-left: 2px solid var(--kami-blue);
+  border-left: 1px solid var(--kami-rule-strong);
   border-radius: 0;
   background: transparent;
   color: var(--kami-warm);
   font-family: var(--kami-body);
-  line-height: 1.82;
+  line-height: 1.72;
+  gap: 0.22rem;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .bq, .protyle-wysiwyg blockquote, .b3-typography blockquote)::before {
   content: "“";
   position: absolute;
-  top: -0.34rem;
-  left: 0.48rem;
+  top: -0.28rem;
+  right: auto;
+  bottom: auto;
+  left: 0.42rem;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
   color: var(--kami-blue);
   font-family: Georgia, "Songti SC", serif;
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   line-height: 1;
+}
+
+html.ying-kami-markdown-enabled .protyle-wysiwyg .bq > .p {
+  margin: 0;
+  padding-top: 0.14rem;
+  padding-bottom: 0.14rem;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg span[data-type~="code"], .b3-typography code:not(.hljs)) {
@@ -357,33 +370,59 @@ html.ying-kami-markdown-enabled :is(.hljs-number, .hljs-literal, .hljs-symbol, .
 html.ying-kami-markdown-enabled :is(.hljs-title, .hljs-section, .hljs-function, .hljs-attribute, .hljs-property, .hljs-variable) { color: #e6edf3 !important; }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg table, .b3-typography table) {
+  box-sizing: border-box;
   width: 100%;
   margin: 1.7rem 0;
   overflow: hidden;
-  border: 1px solid var(--kami-rule-strong);
+  border: 1px solid #dce1e4;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 6px;
-  background: var(--kami-paper-raised);
+  background: #ffffff;
   font-family: var(--kami-ui);
   font-size: 0.88em;
   line-height: 1.58;
+  table-layout: auto;
+}
+
+html.ying-kami-markdown-enabled .protyle-wysiwyg [data-node-id].table table,
+html.ying-kami-markdown-enabled .b3-typography .table table {
+  display: table;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg th, .protyle-wysiwyg td, .b3-typography th, .b3-typography td) {
-  border-color: var(--kami-rule);
+  border: 0;
+  border-right: 1px solid #dce1e4;
+  border-bottom: 1px solid #dce1e4;
   padding: 0.72rem 0.85rem;
+  background: #ffffff !important;
   text-align: left;
   vertical-align: top;
 }
 
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg th:last-child, .protyle-wysiwyg td:last-child, .b3-typography th:last-child, .b3-typography td:last-child) {
+  border-right: 0;
+}
+
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg tbody tr:last-child td, .b3-typography tbody tr:last-child td) {
+  border-bottom: 0;
+}
+
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg th[align="right"], .protyle-wysiwyg td[align="right"], .b3-typography th[align="right"], .b3-typography td[align="right"]) {
+  text-align: right;
+}
+
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg th, .b3-typography th) {
   color: var(--kami-blue);
-  background: var(--kami-paper-tint);
+  background: #f4f6f7 !important;
   font-family: var(--kami-ui);
   font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.35;
+}
+
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg tbody tr:hover td, .b3-typography tbody tr:hover td) {
+  background: #f8fafb;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg mark, .protyle-wysiwyg span[data-type~="mark"], .b3-typography mark) {
@@ -401,23 +440,6 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg u, .protyle-wysiwyg span[da
   text-decoration-color: #0b80aa;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.28em;
-}
-
-html.ying-kami-markdown-enabled :is(
-  .protyle-wysiwyg [custom-decoration="red-circle"],
-  .b3-typography [custom-decoration="red-circle"],
-  .kami-circle
-) {
-  display: inline-block !important;
-  box-sizing: border-box;
-  margin: 0 -0.14em !important;
-  padding: 0.03em 0.38em 0.09em !important;
-  border: 2px solid #e84a5f !important;
-  border-radius: 47% 53% 49% 51% / 52% 45% 55% 48% !important;
-  background: rgba(232, 74, 95, 0.05) !important;
-  color: inherit !important;
-  line-height: 1.38 !important;
-  transform: rotate(-1deg);
 }
 
 html.ying-kami-markdown-enabled :is(
