@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.7
+
+- Unify all six Markdown heading levels with the established level-two blue so hierarchy is expressed by typography and spacing instead of large color jumps.
+
 ## 0.1.6
 
 - Use LXGW WenKai throughout the scoped Markdown theme, excluding monospace code content.

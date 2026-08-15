@@ -6,6 +6,6 @@ The main paper background changes from Kami's `#fff8ed` to white. Scoped non-cod
 
 The writing surface uses a responsive column capped at 1180px, with safe gutters on narrower windows. Inline code is rendered as a flat, shadow-free label.
 
-All headings use LXGW WenKai. Fourth-level headings retain a darker and stronger treatment, level-five headings are slightly larger than body text, and level-six headings remain equal to body text. The editor canvas and print output are fixed to pure white.
+All headings use LXGW WenKai and the established level-two blue. Fourth-level headings retain a stronger weight, level-five headings are slightly larger than body text, and level-six headings remain equal to body text. The editor canvas and print output are fixed to pure white.
 
 Fenced code retains its macOS window treatment while using larger, heavier monospace text and a complete high-contrast, low-saturation palette for Python, JSON and other highlighted languages.

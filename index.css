@@ -113,7 +113,7 @@ html.ying-kami-markdown-enabled .protyle-title__input {
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h1, .b3-typography h1) {
-  color: var(--kami-ink);
+  color: var(--kami-blue);
   font-family: var(--kami-body) !important;
   font-size: 2.25rem;
   font-weight: 400;
@@ -135,7 +135,7 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h2, .b3-typography h2) {
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h3, .b3-typography h3) {
-  color: var(--kami-blue-ink);
+  color: var(--kami-blue);
   font-family: var(--kami-body) !important;
   font-size: 1.22rem;
   font-weight: 400;
@@ -145,7 +145,7 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h3, .b3-typography h3) {
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h4, .b3-typography h4) {
-  color: #30474f;
+  color: var(--kami-blue);
   font-family: var(--kami-body) !important;
   font-size: 1.06rem;
   font-weight: 600;
@@ -156,20 +156,18 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h4, .b3-typography h4) {
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h5, .protyle-wysiwyg .h6, .b3-typography h5, .b3-typography h6) {
-  color: var(--kami-muted);
+  color: var(--kami-blue);
   font-family: var(--kami-body) !important;
   line-height: 1.45;
   margin: 1.7rem 0 0.56rem;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h5, .b3-typography h5) {
-  color: #505e63;
   font-size: 1.06em;
   font-weight: 600;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h6, .b3-typography h6) {
-  color: #68645f;
   font-size: 1em;
   font-weight: 500;
 }
