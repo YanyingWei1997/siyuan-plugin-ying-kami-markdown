@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8
+
+- Match the macOS code panel palette from Esther Design System: ink-blue body text, purple keywords, blue functions, green strings and orange numbers, with the gray-blue comment tone lifted to a readable contrast.
+
 ## 0.1.7
 
 - Unify all six Markdown heading levels with the established level-two blue so hierarchy is expressed by typography and spacing instead of large color jumps.

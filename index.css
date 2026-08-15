@@ -57,16 +57,16 @@ html.ying-kami-markdown-enabled {
   --kami-blue-soft: #e3f0f4;
   --kami-amber: #fbc024;
   --kami-red: #e84a5f;
-  --kami-dark-panel: #20252c;
-  --kami-code-chrome: #2a3039;
-  --kami-code-text: #e6edf3;
-  --kami-code-muted: #8b949e;
-  --kami-code-red: #ff7b72;
-  --kami-code-blue: #79c0ff;
-  --kami-code-string: #a5d6ff;
-  --kami-code-green: #7ee787;
-  --kami-code-purple: #d2a8ff;
-  --kami-code-orange: #ffa657;
+  --kami-dark-panel: #1a1b26;
+  --kami-code-chrome: #2d2d3a;
+  --kami-code-text: #a9b1d6;
+  --kami-code-muted: #7a83ab;
+  --kami-code-red: #f7768e;
+  --kami-code-blue: #7aa2f7;
+  --kami-code-string: #9ece6a;
+  --kami-code-green: #9ece6a;
+  --kami-code-purple: #bb9af7;
+  --kami-code-orange: #ff9e64;
   --kami-body: "LXGW WenKai", "霞鹜文楷", "PingFang SC", "Songti SC", serif;
   --kami-ui: var(--kami-body);
   --kami-mono: "Maple Mono NF CN", "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
@@ -308,7 +308,7 @@ html.ying-kami-markdown-enabled .b3-typography pre::before {
   place-items: center;
   border-radius: 10px 10px 0 0;
   background: var(--kami-code-chrome) !important;
-  color: #c9d2dc !important;
+  color: #8a8a9a !important;
   font-family: var(--kami-mono);
   font-size: 0.9rem;
   font-weight: 500;
@@ -362,8 +362,8 @@ html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action__la
   left: auto;
   margin: 0;
   padding: 2px 5px;
-  color: #c2cad4;
-  background: #303845;
+  color: #8a8a9a;
+  background: var(--kami-code-chrome);
   border-radius: 3px;
   font-family: var(--kami-mono);
   font-size: 11px;
@@ -396,11 +396,11 @@ html.ying-kami-markdown-enabled :is(.hljs-comment, .hljs-quote) {
 }
 
 html.ying-kami-markdown-enabled :is(.hljs-keyword, .hljs-selector-tag, .hljs-template-tag, .hljs-type) {
-  color: var(--kami-code-red) !important;
+  color: var(--kami-code-purple) !important;
 }
 
 html.ying-kami-markdown-enabled :is(.hljs-name, .hljs-tag) {
-  color: var(--kami-code-green) !important;
+  color: var(--kami-code-blue) !important;
 }
 
 html.ying-kami-markdown-enabled :is(.hljs-operator, .hljs-punctuation, .hljs-subst, .hljs-params) {
@@ -411,24 +411,24 @@ html.ying-kami-markdown-enabled :is(.hljs-string, .hljs-regexp, .hljs-addition, 
   color: var(--kami-code-string) !important;
 }
 
-html.ying-kami-markdown-enabled :is(.hljs-number, .hljs-literal, .hljs-symbol, .hljs-bullet, .hljs-built_in) {
-  color: var(--kami-code-blue) !important;
-}
-
-html.ying-kami-markdown-enabled :is(.hljs-title, .hljs-section, .hljs-function, .hljs-class) {
-  color: var(--kami-code-purple) !important;
-}
-
-html.ying-kami-markdown-enabled :is(.hljs-attr, .hljs-attribute, .hljs-property, .hljs-variable, .hljs-template-variable) {
+html.ying-kami-markdown-enabled :is(.hljs-number, .hljs-literal, .hljs-symbol, .hljs-bullet) {
   color: var(--kami-code-orange) !important;
 }
 
-html.ying-kami-markdown-enabled :is(.hljs-meta, .hljs-meta .hljs-keyword) {
+html.ying-kami-markdown-enabled :is(.hljs-title, .hljs-section, .hljs-function, .hljs-class, .hljs-built_in) {
   color: var(--kami-code-blue) !important;
 }
 
+html.ying-kami-markdown-enabled :is(.hljs-attr, .hljs-attribute, .hljs-property, .hljs-variable, .hljs-template-variable) {
+  color: var(--kami-code-text) !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-meta, .hljs-meta .hljs-keyword) {
+  color: var(--kami-code-purple) !important;
+}
+
 html.ying-kami-markdown-enabled .hljs-deletion {
-  color: #ffa198 !important;
+  color: var(--kami-code-red) !important;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg table, .b3-typography table) {
