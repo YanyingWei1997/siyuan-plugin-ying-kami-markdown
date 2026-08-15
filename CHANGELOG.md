@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.11
+
+- Keep the native full-code copy action visible in the upper-right corner of every editable code block.
+- Restore readable Markdown fence tokens such as bold, emphasis, links and inline-code markers on the accepted dark code panel.
+- Remove framed display-math borders from inline formulas and automatically number display formulas within each document.
+
 ## 0.1.10
 
 - Refresh marketplace metadata and preview artwork so the first community release matches the accepted heading, tag and code-panel styles.

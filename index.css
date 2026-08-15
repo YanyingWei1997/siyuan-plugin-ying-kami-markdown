@@ -291,16 +291,55 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg span[data-type~="code"], .b
   text-shadow: none !important;
 }
 
-html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .math, .protyle-wysiwyg .render-node[data-subtype="math"], .b3-typography .language-math) {
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg, .b3-typography) {
+  counter-reset: kami-equation;
+}
+
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg div[data-type="NodeMathBlock"].render-node, .b3-typography .language-math) {
+  position: relative;
   box-sizing: border-box;
+  counter-increment: kami-equation;
   margin: 1.65rem 0;
-  padding: 0.9rem 0.9rem 0.9rem 2.35rem;
+  padding: 0.9rem 3.5rem 0.9rem 2.35rem;
   overflow-x: auto;
   border-top: 1px solid var(--kami-rule);
   border-bottom: 1px solid var(--kami-rule);
   background: transparent;
   color: var(--kami-blue-ink);
   text-align: left;
+}
+
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg div[data-type="NodeMathBlock"].render-node, .b3-typography .language-math)::after {
+  content: "(" counter(kami-equation) ")";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  color: var(--kami-muted);
+  font-family: var(--kami-body);
+  font-size: 0.82em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Inline formulas belong to the sentence flow, so they must not inherit the
+ * framed display-math treatment above. */
+html.ying-kami-markdown-enabled :is(
+  .protyle-wysiwyg span[data-type~="inline-math"],
+  .b3-typography span[data-type~="inline-math"]
+) {
+  display: inline !important;
+  box-sizing: content-box;
+  margin: 0 !important;
+  padding: 0 0.04em !important;
+  overflow: visible;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--kami-blue-ink);
+  text-align: inherit;
 }
 
 /* Typora Kami macOS code window, mapped to SiYuan's NodeCodeBlock. */
@@ -370,9 +409,12 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .code-block .hljs, .b3-typo
 }
 
 html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block > .protyle-action {
-  inset: 0;
-  display: block;
-  background: transparent;
+  position: absolute !important;
+  z-index: 8 !important;
+  inset: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+  background: transparent !important;
   pointer-events: none;
 }
 
@@ -409,10 +451,42 @@ html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action .pr
   pointer-events: auto;
 }
 
-html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action__copy { right: 38px; }
-html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action__menu { right: 8px; }
+/* Copy is a primary code-block action: keep it visible in the upper-right on
+ * mouse, keyboard and touch. The secondary menu remains reveal-on-demand. */
+html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy {
+  right: 10px !important;
+  display: inline-flex !important;
+  visibility: visible !important;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(192, 202, 245, 0.2);
+  border-radius: 5px;
+  background: rgba(26, 27, 38, 0.34) !important;
+  color: #c0caf5;
+  opacity: 0.86 !important;
+}
+
+html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  color: inherit;
+  fill: currentColor;
+}
+
+html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy:is(:hover, :focus-visible) {
+  border-color: rgba(192, 202, 245, 0.42);
+  background: rgba(26, 27, 38, 0.68) !important;
+  color: #ffffff;
+  opacity: 1 !important;
+}
+
+html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action__menu { right: 44px; }
 html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block:is(:hover, :focus-within) .protyle-action .protyle-icon,
 html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action .protyle-icon:focus-visible { opacity: 0.8 !important; }
+
+html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block:is(:hover, :focus-within) .protyle-action .protyle-action__copy,
+html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action .protyle-action__copy:focus-visible { opacity: 1 !important; }
 
 html.ying-kami-markdown-enabled :is(.hljs-comment, .hljs-quote) {
   color: var(--kami-code-muted) !important;
@@ -448,6 +522,29 @@ html.ying-kami-markdown-enabled :is(.hljs-attr, .hljs-attribute, .hljs-property,
 
 html.ying-kami-markdown-enabled :is(.hljs-meta, .hljs-meta .hljs-keyword) {
   color: var(--kami-code-purple) !important;
+}
+
+/* Markdown highlighting uses token classes that are not covered by the
+ * programming-language palette. Explicit light colors prevent the active
+ * SiYuan highlight theme from leaking near-black text into the dark panel. */
+html.ying-kami-markdown-enabled :is(.hljs-strong, .hljs-emphasis, .hljs-formula) {
+  color: #c0caf5 !important;
+}
+
+html.ying-kami-markdown-enabled .hljs-strong {
+  font-weight: 700;
+}
+
+html.ying-kami-markdown-enabled .hljs-emphasis {
+  font-style: italic;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-link, .hljs-selector-attr) {
+  color: #7dcfff !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-code, .hljs-template-variable) {
+  color: var(--kami-code-string) !important;
 }
 
 html.ying-kami-markdown-enabled .hljs-deletion {
