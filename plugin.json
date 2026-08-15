@@ -2,15 +2,15 @@
   "name": "siyuan-plugin-ying-kami-markdown",
   "author": "YanyingWei1997",
   "url": "https://github.com/YanyingWei1997/siyuan-plugin-ying-kami-markdown",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "minAppVersion": "3.7.0",
   "backends": ["all"],
   "frontends": ["all"],
   "disabledInPublish": false,
   "displayName": {"default": "YING Kami Markdown", "zh-CN": "YING Kami Markdown 样式"},
   "description": {
-    "default": "A direct SiYuan adaptation of the local Typora Kami CSS, with only the paper background changed to white.",
-    "zh-CN": "直接迁移本机 Typora Kami CSS 到思源，仅将正文纸面背景改为白色。"
+    "default": "A Chinese-first SiYuan Markdown style with LXGW WenKai, consistent blue headings, white paper, capsule tags and an Esther-inspired macOS code panel.",
+    "zh-CN": "中文优先的思源 Markdown 样式：霞鹜文楷、统一深蓝标题、纯白纸面、胶囊 Tag 与 Esther 风格 macOS 代码框。"
   },
   "readme": {"default": "README.md", "zh-CN": "README.zh-CN.md"},
   "funding": {"custom": []},

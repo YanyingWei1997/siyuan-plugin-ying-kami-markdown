@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.10
+
+- Refresh marketplace metadata and preview artwork so the first community release matches the accepted heading, tag and code-panel styles.
+
 ## 0.1.9
 
 - Render inline tags as subtle blue capsules with a translucent background, fine outline and accessible hover state.
