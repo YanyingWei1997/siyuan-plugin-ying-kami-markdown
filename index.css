@@ -57,8 +57,15 @@ html.ying-kami-markdown-enabled {
   --kami-blue-soft: #e3f0f4;
   --kami-amber: #fbc024;
   --kami-red: #e84a5f;
-  --kami-dark-panel: #1e2029;
-  --kami-code-chrome: #2a2d39;
+  --kami-dark-panel: #20252c;
+  --kami-code-chrome: #2a3039;
+  --kami-code-text: #f0f3f6;
+  --kami-code-muted: #aab4c0;
+  --kami-code-blue: #8dccff;
+  --kami-code-cyan: #9fd4ff;
+  --kami-code-green: #b6dcae;
+  --kami-code-purple: #dabaff;
+  --kami-code-gold: #f2d39b;
   --kami-ui: "Inter Variable", Inter, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
   --kami-body: "LXGW WenKai", "霞鹜文楷", "PingFang SC", "Songti SC", serif;
   --kami-mono: "Maple Mono NF CN", "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
@@ -282,13 +289,13 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .code-block, .b3-typography
   padding: 0;
   border: 0;
   border-radius: 10px;
-  background: #1f2329 !important;
+  background: var(--kami-dark-panel) !important;
   box-shadow: 0 10px 28px rgba(17, 18, 25, 0.16);
-  color: #e6edf3;
+  color: var(--kami-code-text);
   font-family: var(--kami-mono);
-  font-size: 0.88em;
-  font-weight: 400;
-  line-height: 1.78;
+  font-size: 0.94em;
+  font-weight: 500;
+  line-height: 1.82;
 }
 
 html.ying-kami-markdown-enabled .protyle-wysiwyg div[data-type="NodeCodeBlock"].code-block::before,
@@ -301,11 +308,11 @@ html.ying-kami-markdown-enabled .b3-typography pre::before {
   height: 2.15rem;
   place-items: center;
   border-radius: 10px 10px 0 0;
-  background: #252b34 !important;
-  color: #9da7b3 !important;
+  background: var(--kami-code-chrome) !important;
+  color: #c9d2dc !important;
   font-family: var(--kami-mono);
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 500;
   pointer-events: none;
 }
 
@@ -332,8 +339,8 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .code-block .hljs, .b3-typo
   position: relative;
   z-index: 1;
   display: block;
-  padding: 3.2rem 1.5rem 2.2rem !important;
-  color: #e6edf3;
+  padding: 3.2rem 1.65rem 2.25rem !important;
+  color: var(--kami-code-text);
   background: transparent !important;
   font: inherit;
   line-height: inherit;
@@ -356,13 +363,13 @@ html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action__la
   left: auto;
   margin: 0;
   padding: 2px 5px;
-  color: #8b949e;
-  background: #252b34;
+  color: #c2cad4;
+  background: #303845;
   border-radius: 3px;
   font-family: var(--kami-mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.08em;
-  opacity: 0.86 !important;
+  opacity: 1 !important;
   pointer-events: auto;
   text-transform: lowercase;
 }
@@ -385,12 +392,41 @@ html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action__me
 html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block:is(:hover, :focus-within) .protyle-action .protyle-icon,
 html.ying-kami-markdown-enabled .protyle-wysiwyg .code-block .protyle-action .protyle-icon:focus-visible { opacity: 0.8 !important; }
 
-html.ying-kami-markdown-enabled :is(.hljs-comment, .hljs-quote) { color: #8b949e !important; }
-html.ying-kami-markdown-enabled :is(.hljs-keyword, .hljs-selector-tag, .hljs-type, .hljs-template-tag) { color: #79c0ff !important; }
-html.ying-kami-markdown-enabled :is(.hljs-operator, .hljs-punctuation) { color: #e6edf3 !important; }
-html.ying-kami-markdown-enabled :is(.hljs-string, .hljs-regexp, .hljs-addition) { color: #a5d6ff !important; }
-html.ying-kami-markdown-enabled :is(.hljs-number, .hljs-literal, .hljs-symbol, .hljs-bullet, .hljs-built_in, .hljs-type) { color: #d2a8ff !important; }
-html.ying-kami-markdown-enabled :is(.hljs-title, .hljs-section, .hljs-function, .hljs-attribute, .hljs-property, .hljs-variable) { color: #e6edf3 !important; }
+html.ying-kami-markdown-enabled :is(.hljs-comment, .hljs-quote) {
+  color: var(--kami-code-muted) !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-keyword, .hljs-selector-tag, .hljs-template-tag, .hljs-name, .hljs-tag, .hljs-type) {
+  color: var(--kami-code-blue) !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-operator, .hljs-punctuation, .hljs-subst, .hljs-params) {
+  color: var(--kami-code-text) !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-string, .hljs-regexp, .hljs-addition, .hljs-doctag) {
+  color: var(--kami-code-green) !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-number, .hljs-literal, .hljs-symbol, .hljs-bullet, .hljs-built_in) {
+  color: var(--kami-code-purple) !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-title, .hljs-section, .hljs-function, .hljs-class) {
+  color: var(--kami-code-gold) !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-attr, .hljs-attribute, .hljs-property, .hljs-variable, .hljs-template-variable) {
+  color: var(--kami-code-cyan) !important;
+}
+
+html.ying-kami-markdown-enabled :is(.hljs-meta, .hljs-meta .hljs-keyword) {
+  color: #e5b978 !important;
+}
+
+html.ying-kami-markdown-enabled .hljs-deletion {
+  color: #f2a7a7 !important;
+}
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg table, .b3-typography table) {
   box-sizing: border-box;

@@ -7,3 +7,5 @@ The main paper background changes from Kami's `#fff8ed` to white. Typography, hi
 The writing surface uses a responsive column capped at 1180px, with safe gutters on narrower windows. Inline code is rendered as a flat, shadow-free label.
 
 Fourth-level headings use a darker and stronger calligraphic treatment, while fifth- and sixth-level headings return to the Markdown body typeface. The editor canvas and print output are fixed to pure white.
+
+Fenced code retains its macOS window treatment while using larger, heavier monospace text and a complete high-contrast, low-saturation palette for Python, JSON and other highlighted languages.

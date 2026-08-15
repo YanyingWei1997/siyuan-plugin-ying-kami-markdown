@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4
+
+- Increase fenced-code size, weight and line height for sustained reading.
+- Replace low-contrast inherited syntax colors with a complete accessible highlight palette, including JSON attributes.
+- Improve the contrast of code titles and language labels while preserving the macOS window treatment.
+
 ## 0.1.3
 
 - Use the Markdown body typeface for fifth- and sixth-level headings instead of the UI sans stack.
