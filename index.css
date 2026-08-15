@@ -82,6 +82,10 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg, .b3-typography) {
   background: var(--kami-paper);
 }
 
+html.ying-kami-markdown-enabled .protyle-content {
+  background: #ffffff !important;
+}
+
 html.ying-kami-markdown-enabled .protyle-title {
   box-sizing: border-box;
   width: calc(100% - var(--kami-reading-inset)) !important;
@@ -133,23 +137,33 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h3, .b3-typography h3) {
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h4, .b3-typography h4) {
-  color: #3e5157;
+  color: #30474f;
   font-family: "Kami Minor", "汇迹正楷", var(--kami-body) !important;
-  font-size: 1.03rem;
-  font-weight: 400;
+  font-size: 1.06rem;
+  font-weight: 600;
   line-height: 1.48;
   margin: 2rem 0 0.66rem;
-  padding-left: 0.56rem;
-  border-left: 1px solid rgba(41, 67, 77, 0.38);
+  padding-left: 0.62rem;
+  border-left: 2px solid rgba(41, 67, 77, 0.56);
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h5, .protyle-wysiwyg .h6, .b3-typography h5, .b3-typography h6) {
   color: var(--kami-muted);
-  font-family: var(--kami-ui) !important;
-  font-size: 0.84rem;
-  font-weight: 650;
+  font-family: var(--kami-body) !important;
   line-height: 1.45;
   margin: 1.7rem 0 0.56rem;
+}
+
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h5, .b3-typography h5) {
+  color: #505e63;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .h6, .b3-typography h6) {
+  color: #68645f;
+  font-size: 0.86rem;
+  font-weight: 500;
 }
 
 html.ying-kami-markdown-enabled :is(.protyle-wysiwyg strong, .protyle-wysiwyg span[data-type~="strong"], .b3-typography strong) {
@@ -502,5 +516,13 @@ html.ying-kami-markdown-enabled :is(.protyle-wysiwyg .hr > div::after, .b3-typog
 
   html.ying-kami-markdown-enabled :is(.protyle-title, .protyle-wysiwyg, .b3-typography) {
     font-size: 16px;
+  }
+}
+
+@media print {
+  html.ying-kami-markdown-enabled,
+  html.ying-kami-markdown-enabled body,
+  html.ying-kami-markdown-enabled :is(.protyle-content, .protyle-wysiwyg, .b3-typography) {
+    background: #ffffff !important;
   }
 }

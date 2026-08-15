@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- Use the Markdown body typeface for fifth- and sixth-level headings instead of the UI sans stack.
+- Strengthen fourth-level headings with darker text, heavier weight and a clearer two-pixel guide rule.
+- Keep the editor canvas and print output on a pure white paper background.
+
 ## 0.1.2
 
 - Expand the fixed 720px writing column to a responsive layout capped at 1180px.
